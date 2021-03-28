@@ -9,14 +9,14 @@ import { Response } from './shared/response.model';
 @Injectable({
     providedIn: 'root'
 })
-export class YellowCardService {
+export class RedCardService {
     constructor(
         private httpClient: HttpClient) {
     }
 
-    fetchYellowCards(): Observable<Card[]> {
+    fetchRedCards(): Observable<Card[]> {
         return this.httpClient
-            .get<Response>(environment.apiUrl + 'statistics/yellowcards')
+            .get<Response>(environment.apiUrl + 'statistics/redcards')
             .pipe(retry(1), map(responseData => {
                 const cardsArray: Card[] = [];
 
