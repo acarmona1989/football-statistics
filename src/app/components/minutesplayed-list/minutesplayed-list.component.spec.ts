@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { YellowcardItemComponent } from './yellowcard-item.component';
+import { MinutesplayedListComponent } from './minutesplayed-list.component';
 
-describe('YellowcardItemComponent', () => {
-  let component: YellowcardItemComponent;
-  let fixture: ComponentFixture<YellowcardItemComponent>;
+describe('MinutesplayedListComponent', () => {
+  let component: MinutesplayedListComponent;
+  let fixture: ComponentFixture<MinutesplayedListComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ YellowcardItemComponent ]
+      declarations: [ MinutesplayedListComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(YellowcardItemComponent);
+    fixture = TestBed.createComponent(MinutesplayedListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

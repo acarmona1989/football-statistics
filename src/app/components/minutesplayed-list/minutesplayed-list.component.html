@@ -1,4 +1,4 @@
-<h4>Yellow cards Report</h4>
+<h4>Minutes played Report</h4>
 <table class="table table-striped">
     <thead>
         <tr>
@@ -8,15 +8,15 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let card of cards">
-            <th scope="row">{{card.id}}</th>
-            <td>{{card.name}}</td>
-            <td>{{card.total}}</td>
+        <tr *ngFor="let minutes of minutesPlayed">
+            <th scope="row">{{minutes.id}}</th>
+            <td>{{minutes.name}}</td>
+            <td>{{minutes.total}}</td>
         </tr>
     </tbody>
 </table>
 <div style="text-align: center;">
-    <p *ngIf="cards.length === 0">
+    <p *ngIf="minutesPlayed.length === 0">
         No items to show
     </p>
 </div>

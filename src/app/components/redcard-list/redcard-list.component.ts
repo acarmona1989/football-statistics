@@ -1,23 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Card } from 'src/app/services/card.model';
-import { YellowCardService } from 'src/app/services/yellowcard.service';
+import { RedCardService } from 'src/app/services/redcard.services';
 
 @Component({
-  selector: 'app-yellowcard-list',
-  templateUrl: './yellowcard-list.component.html',
-  styleUrls: ['./yellowcard-list.component.css']
+  selector: 'app-redcard-list',
+  templateUrl: './redcard-list.component.html',
+  styleUrls: ['./redcard-list.component.css']
 })
-export class YellowcardListComponent implements OnInit {
+export class RedcardListComponent implements OnInit {
   cards: Card[] = [];
   cardsListSub: Subscription;
 
-  constructor(private yellowCardService: YellowCardService) { 
+  constructor(private redCardService: RedCardService) { 
     this.cardsListSub = new Subscription();
   }
 
   ngOnInit(): void {
-    this.cardsListSub = this.yellowCardService.fetchYellowCards()
+    this.cardsListSub = this.redCardService.fetchRedCards()
               .subscribe(
                 cards=> {
                   this.cards = cards;
